@@ -101,7 +101,6 @@ public final class Server {
             } else if (listOfFiles[i].isDirectory()) {
               System.out.println("Directory " + listOfFiles[i].getName());
             }
-            System.out.println("github");
         }
     }
     
