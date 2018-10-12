@@ -136,13 +136,15 @@ public final class Server {
         
         @Override
         public void run(){
+            String username = ""; 
+            String password = "";
             try {
                 // Create  input - output 
                 out = new ObjectOutputStream(client.getOutputStream());
                 in = new ObjectInputStream(client.getInputStream());
                 // Check login
                 while(true){
-                    String username, password;
+                    //String username, password;
                     // Việc check username và password có null hay "" do client xử lý
                     username = (String) in.readObject();
                     password = (String) in.readObject();
@@ -188,6 +190,13 @@ public final class Server {
                 System.out.println("error frome server");
             }
             finally{
+                if(username != null){
+                    director.remove(username);
+                }
+                try {
+                    client.close();
+                } catch (Exception e) {
+                }
                 
             }
         }

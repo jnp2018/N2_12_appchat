@@ -68,7 +68,7 @@ public class FormChat extends JFrame implements ActionListener{
         
         setTitle(sender + " to " + receiver);
         pack();
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE );
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE );
         setLocationRelativeTo(null);
         setVisible(true);
     }
