@@ -27,7 +27,7 @@ import javax.swing.JTable;
  */
 public class Client implements ActionListener,MouseListener{
     
-    private Map<String,FormChat> mapChat = new HashMap<String,FormChat>();
+    //private Map<String,FormChat> mapChat = new HashMap<String,FormChat>();
     
     private static final int PORT = 9999;
     
@@ -36,7 +36,7 @@ public class Client implements ActionListener,MouseListener{
     private Socket client;
     
     private User user;
-    
+    private Map<String,FormChat> mapChat = new HashMap<String,FormChat>();
     private FormLogin loginForm;
     private FormUser userForm;
 

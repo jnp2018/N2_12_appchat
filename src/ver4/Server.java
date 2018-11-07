@@ -162,8 +162,7 @@ public final class Server {
                     else{
                         out.writeObject("ERROR");
                     } 
-                }
-                
+                } 
                 out.writeObject(user);
                 
                 while(true){
